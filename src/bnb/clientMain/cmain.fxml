@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="1000.0" styleClass="custom-pane" stylesheets="@../../../../resources/light-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bnb.clientMain.CmainController">
+   <children>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="150.0" resizableOnDrag="true" resizeContent="true" styleClass="jfx-drawer" />
+      <AnchorPane fx:id="rootAnchorPane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+               <children>
+                  <JFXTabPane fx:id="mainTabPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleMenuSettings" text="Settings" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuClose" text="Exit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Add">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleMenuAddBook" text="Add Trip" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuAddMember" text="Add Destination" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="View">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuViewBook" text="Trip List" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuViewMemberList" text="Client List" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleIssuedList" text="Destination List" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuFullScreen" text="Full Screen" />
+                     </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleAboutMenu" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
